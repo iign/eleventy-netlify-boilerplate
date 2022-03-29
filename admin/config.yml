@@ -38,3 +38,20 @@ collections:
           - { label: "Key", name: "key", widget: "string" }
           - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "vehicle"
+    label: "Vehicle"
+    folder: "vehicles"
+    create: true
+    slug: "{{slug}}"
+    fields: # The fields for each vehicle
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options:
+          - { label: "Automóvil", value: "car" }
+          - { label: "Paris", value: "bike" }
+          - { label: "Paris", value: "other" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Autonomía", name: "autonomy", widget: "number", value_type: "int" }
